@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <script src="./valid.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="User name" required="" maxlength="50" >
+                <input type="email" name="email" placeholder="Email" required="" oninvalid="this.setCustomValidity('Please Enter a Valid Email Address')">
+                <input type="Password" name="pswd" id="usr_pas" placeholder="Password" required="" maxlength="30">
+                <input type="checkbox" name="show_pas" id="showpas" onclick="showpass()" > 
+                <textarea name="Address" id="usr_add" cols="80" rows="10" placeholder="Address" ></textarea>
+                <input type="tel" id="cont_num" name="cont_num" placeholder="Contact Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="10" required oninvalid="this.setCustomValidity('Enter A Valid Mobile Number')"/>
+                <button>Sign up</button>
+            </form>
+        </div>
+
+        <!-- Login page validation is pending -->
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="Password" name="pswd" placeholder="Password" required="">
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>

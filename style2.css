@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost' , sans-serif;
+    background: linear-gradient(to bottom,#0f0c29,#302b63,#24243e);
+}
+
+.main{
+    width: 500px;
+    height: 650px;
+    background: red;
+    overflow: hidden;
+    /* background: url("1.jpg") no-repeat center / cover; */
+    background: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000; 
+}
+
+#chk{
+    display: none;
+}
+
+
+#signup{
+    height: 100%;
+    width:100%;
+    background-color: aqua;
+}
+
+
+label{
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+input{
+    width: 60%;
+    height: 20px;
+    background-color: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    /* border-bottom: solid 0.5px #000000; */
+}
+textarea{
+    width: 60%;
+    height: 65px;
+    background-color: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button{
+    width: 40%;
+    height: 40px;
+    margin: 20px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #450ea9;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+
+
+button:hover{
+    background: #b8a5da;
+}
+
+.login{
+    height: 600px;
+    background: #eee;
+    border-radius: 80% / 10%;
+    transform: translateY(-20px);
+    transition: .8s ease-in-out;
+}
+
+.login label{
+    color: #573b8a;
+    transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+
+#chk:checked ~ .signup label{
+    transform: scale(.6);
+} 
+
+
+#usr_add{
+    resize:none;
+}
+
+
+
+/* here i Disabled input typ=number arrows =======================> */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ==================================> */
