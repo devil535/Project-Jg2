@@ -10,8 +10,8 @@ body{
 }
 
 .main{
-    width: 500px;
-    height: 650px;
+    width: 400px;
+    height: 550px;
     background: red;
     overflow: hidden;
     /* background: url("1.jpg") no-repeat center / cover; */
@@ -37,14 +37,14 @@ label{
     font-size: 2.3em;
     justify-content: center;
     display: flex;
-    margin: 40px;
+    margin: 25px;
     font-weight: bold;
     cursor: pointer;
     transition: .5s ease-in-out;
 }
 
-input{
-    width: 60%;
+input,textarea{
+    width: 70%;
     height: 20px;
     background-color: #e0dede;
     justify-content: center;
@@ -56,8 +56,8 @@ input{
     border-radius: 5px;
     /* border-bottom: solid 0.5px #000000; */
 }
-textarea{
-    width: 60%;
+/* textarea{
+    width: 70%;
     height: 65px;
     background-color: #e0dede;
     justify-content: center;
@@ -67,7 +67,7 @@ textarea{
     border: none;
     outline: none;
     border-radius: 5px;
-}
+} */
 
 button{
     width: 40%;
@@ -97,7 +97,7 @@ button:hover{
     height: 600px;
     background: #eee;
     border-radius: 80% / 10%;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
     transition: .8s ease-in-out;
 }
 
@@ -107,7 +107,7 @@ button:hover{
 }
 
 #chk:checked ~ .login{
-    transform: translateY(-500px);
+    transform: translateY(-430px);
 }
 
 #chk:checked ~ .login label{
