@@ -1,107 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Sign up</title>
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="style2.css" />
     <script src="./valid.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="main">
-        <input type="checkbox" id="chk" aria-hidden="true">
+      <input type="checkbox" id="chk" aria-hidden="true" />
 
-        <div class="signup" >
-            <form onsubmit="return popup_window(event)" method="get" >
-                <label for="chk" aria-hidden="true">Sign up</label>
-                <input type="text" name="txt" id="user_name" placeholder="User name" required="" maxlength="50" >
-                <input type="email" name="email" id="email_id" placeholder="Email" required>
-                <input type="Password" name="pswd" id="usr_pas" placeholder="Password" required="" maxlength="30">
-                <textarea name="Address" id="usr_add" cols="80" rows="10" placeholder="Address" ></textarea>
-                <input type="tel" id="cont_num" name="cont_num" placeholder="Contact Number"  maxlength="10" />
-                <input type="submit" value="Sign Up" id="submit_button">
-            </form>
+      <div class="signup">
+        <form onsubmit="return popup_window(event)" method="get">
+          <label for="chk" aria-hidden="true">Register</label>
+          <input
+            type="text"
+            name="txt"
+            id="user_name"
+            placeholder="User name"
+            required=""
+            maxlength="50"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email_id"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="Password"
+            name="pswd"
+            id="usr_pas"
+            placeholder="Password"
+            required=""
+            maxlength="30"
+          />
+          <textarea
+            name="Address"
+            id="usr_add"
+            cols="80"
+            rows="10"
+            placeholder="Address"
+          ></textarea>
+          <input
+            type="tel"
+            id="cont_num"
+            name="cont_num"
+            placeholder="Contact Number"
+            minlength="10"
+            maxlength="10"
+          />
+          <input type="submit" value="Sign Up" id="submit_button" />
+        </form>
+      </div>
+
+      <!-- Login page validation is pending -->
+      <div class="login" onsubmit="return login_valid(event)">
+        <form>
+          <label for="chk" aria-hidden="true">Login</label>
+          <input
+            type="text"
+            name="usr_id"
+            placeholder="User ID"
+            id="login_uid"
+            required
+          />
+          <input
+            type="Password"
+            name="pswd"
+            placeholder="Password"
+            id="login_pass"
+            required
+          />
+          <input type="submit" value="Login" id="login_button" />
+        </form>
+      </div>
+    </div>
+
+    <!-- For Popup Window Screen ========================> -->
+
+    <!-- Popup Background -->
+    <div id="myModal" class="modal">
+      <!-- Popup Window  -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <center><h2>User Registration successful.</h2></center>
         </div>
-
-        <!-- Login page validation is pending -->
-        <div class="login">
-            <form>
-                <label for="chk" aria-hidden="true">Login</label>
-                <input type="email" name="email" placeholder="Email" required="">
-                <input type="Password" name="pswd" placeholder="Password" required="">
-                <button>Login</button>
-            </form>
+        <div class="modal-body">
+          <p>User ID : UID_001</p>
+          <p id="pop_usr_name"></p>
+          <p id="pop_email"></p>
         </div>
+      </div>
     </div>
-    
+
+    <!-- ==================================================> -->
+
+    <script>
+      var modal = document.getElementById("myModal");
+
+      // ID of "X" Button
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on "X" button it will close the popup
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the popup, it will close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // main function of popup
+      let log_pass;
+      function popup_window(ev) {
+        ev.preventDefault();
+        modal.style.display = "block";
+        let usr_id_val = document.getElementById("user_name").value;
+        let email_val = document.getElementById("email_id").value;
+        log_pass = document.getElementById("usr_pas").value;
+
+        document.getElementById("pop_usr_name").innerText =
+          "User Name: " + usr_id_val;
+        document.getElementById("pop_email").innerText =
+          "Email ID: " + email_val;
+
+      }
 
 
-<!-- For Popup Window Screen ========================> -->
+      function login_valid(ev) {
+        ev.preventDefault();
+        let usr_id = document.getElementById("login_uid").value;
+        let pass = document.getElementById("login_pass").value;
+        
+        if (usr_id === "UID_001" && pass === log_pass) {
+          window.location.href = "./homepage.html";
+        } else {
+          modal.style.display = "block";
+        }
+      }
+    </script>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <center><h2>User Registration successful.</h2></center>
-    </div>
-    <div class="modal-body">
-      <p>User ID : UID_001</p>
-      <p>User Name: <p id="pop_usr_name"></p> </p>
-      <p>Email ID: <p id="pop_email"></p></p>
-    </div>
-    <div class="modal-footer">
-      <center><h4>Press Close Button ("X") to close the window</h4></center>
-    </div>
-  </div>
-
-</div>
-
-
-<!-- ==================================================> -->
-
-<script>
-var modal = document.getElementById("myModal");
-
-
-
-// var usr_id_val=document.getElementById("user_name").value;
-// var email_val=document.getElementById("email_id").value;
-
-
-// document.getElementById("pop_usr_name").innerText = text;
-// var email=document.getElementById("pop_email");
-
-
-
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-function popup_window(ev){
-    ev.preventDefault();
-    modal.style.display = "block";
-    
-}
-</script>
-
-
-<!-- ====================================popup window -->
-
-
-</body>
+    <!-- ====================================popup window -->
+  </body>
 </html>
