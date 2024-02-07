@@ -38,6 +38,7 @@
             placeholder="Password"
             required=""
             maxlength="30"
+    required
           />
           <textarea
             name="Address"
@@ -45,6 +46,7 @@
             cols="80"
             rows="10"
             placeholder="Address"
+    required
           ></textarea>
           <input
             type="tel"
@@ -53,7 +55,10 @@
             placeholder="Contact Number"
             minlength="10"
             maxlength="10"
+    pattern="[1-9]{1}[0-9]{9}"
+    required
           />
+
           <input type="submit" value="Sign Up" id="submit_button" />
         </form>
       </div>
@@ -99,25 +104,57 @@
       </div>
     </div>
 
+    <div id="login_error" class="modal">
+      <!-- Popup Window  -->
+      <div class="login-content">
+        <div class="login-header">
+          <span class="close2">&times;</span>
+          <center><h2>Validation Error.</h2></center>
+        </div>
+        <div class="login-body">
+          <p>Enter Valid User ID or Password</p>
+        </div>
+      </div>
+    </div>
+
+
+
     <!-- ==================================================> -->
 
     <script>
       var modal = document.getElementById("myModal");
+      var login_pop = document.getElementById("login_error");
+
 
       // ID of "X" Button
       var span = document.getElementsByClassName("close")[0];
+      var span2 = document.getElementsByClassName("close2")[0];
 
       // When the user clicks on "X" button it will close the popup
       span.onclick = function () {
         modal.style.display = "none";
       };
 
+      span2.onclick = function () {
+login_pop.style.display = "none";
+      };
+
+
       // When the user clicks anywhere outside of the popup, it will close it
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none";
+  login_pop.style.display = "none";
         }
       };
+
+
+      window.onclick = function (event) {
+        if (event.target == login_error) {
+  login_pop.style.display = "none";
+        }
+      };
+
 
       // main function of popup
       let log_pass;
@@ -144,7 +181,7 @@
         if (usr_id === "UID_001" && pass === log_pass) {
           window.location.href = "./homepage.html";
         } else {
-          modal.style.display = "block";
+          login_error.style.display = "block";
         }
       }
     </script>
@@ -152,3 +189,5 @@
     <!-- ====================================popup window -->
   </body>
 </html>
+
+

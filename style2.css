@@ -1,126 +1,127 @@
+
 body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Jost' , sans-serif;
-    background: linear-gradient(to bottom,#0f0c29,#302b63,#24243e);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Jost' , sans-serif;
+  background: linear-gradient(to bottom,#0f0c29,#302b63,#24243e);
 }
 
 .main{
-    width: 400px;
-    height: 550px;
-    background: red;
-    overflow: hidden;
-    /* background: url("1.jpg") no-repeat center / cover; */
-    background: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
-    border-radius: 10px;
-    box-shadow: 5px 20px 50px #000; 
+  width: 400px;
+  height: 550px;
+  background: red;
+  overflow: hidden;
+  /* background: url("1.jpg") no-repeat center / cover; */
+  background: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000; 
 }
 
 #chk{
-    display: none;
+  display: none;
 }
 
 
 #signup{
-    height: 100%;
-    width:100%;
-    background-color: aqua;
+  height: 100%;
+  width:100%;
+  background-color: aqua;
 }
 
 
 label{
-    color: #fff;
-    font-size: 2.3em;
-    justify-content: center;
-    display: flex;
-    margin: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .5s ease-in-out;
+  color: #fff;
+  font-size: 2.3em;
+  justify-content: center;
+  display: flex;
+  margin: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s ease-in-out;
 }
 
 input{
-    width: 70%;
-    height: 20px;
-    background-color: #e0dede;
-    justify-content: center;
-    display: flex;
-    margin: 20px auto;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    /* border-bottom: solid 0.5px #000000; */
+  width: 70%;
+  height: 20px;
+  background-color: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  /* border-bottom: solid 0.5px #000000; */
 }
 textarea{
-    width: 70%;
-    height: 65px;
-    background-color: #e0dede;
-    justify-content: center;
-    display: flex;
-    margin: 20px auto;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
+  width: 70%;
+  height: 65px;
+  background-color: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
 }
 
 button,#submit_button,#login_button{
-    width: 40%;
-    height: 40px;
-    margin: 20px auto;
-    justify-content: center;
-    display: block;
-    color: #fff;
-    background: #450ea9;
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 20px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    transition: .2s ease-in;
-    cursor: pointer;
+  width: 40%;
+  height: 40px;
+  margin: 20px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #450ea9;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: .2s ease-in;
+  cursor: pointer;
 }
 
 
 
 button:hover{
-    background: #b8a5da;
+  background: #b8a5da;
 }
 
 .login{
-    height: 600px;
-    background: #eee;
-    border-radius: 80% / 10%;
-    transform: translateY(-15px);
-    transition: .8s ease-in-out;
+  height: 600px;
+  background: #eee;
+  border-radius: 80% / 10%;
+  transform: translateY(-15px);
+  transition: .8s ease-in-out;
 }
 
 .login label{
-    color: #573b8a;
-    transform: scale(.6);
+  color: #573b8a;
+  transform: scale(.6);
 }
 
 #chk:checked ~ .login{
-    transform: translateY(-430px);
+  transform: translateY(-430px);
 }
 
 #chk:checked ~ .login label{
-    transform: scale(1);
+  transform: scale(1);
 }
 
 #chk:checked ~ .signup label{
-    transform: scale(.6);
+  transform: scale(.6);
 } 
 
 
 #usr_add{
-    resize:none;
+  resize:none;
 }
 
 
@@ -130,13 +131,13 @@ button:hover{
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+-webkit-appearance: none;
+margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+-moz-appearance: textfield;
 }
 
 /* ==================================> */
@@ -147,70 +148,97 @@ input[type=number] {
 /* ===============================> Popup Screen CSS ============================> */
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 250px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.847); /* Black w/ opacity */
-  }
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 250px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.847); /* Black w/ opacity */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
  
-  .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 50%;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-   
-  }
-  
+}
 
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
-  
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-  
+.login-content{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
 
-  .close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+
+.close ,.close2 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus ,
+.close2:hover ,
+.close2:focus{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+  /* border-radius: 30px; */
+  border-top-left-radius:30px ;
+  border-top-right-radius: 30px;
   
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+}
+
+.login-header {
+  padding: 2px 16px;
+  background-color: #f10303;
+  color: white;
+  /* border-radius: 30px; */
+  border-top-left-radius:30px ;
+  border-top-right-radius: 30px;
   
-  .modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-    /* border-radius: 30px; */
-    border-top-left-radius:30px ;
-    border-top-right-radius: 30px;
-    
-  }
-  
-  .modal-body {padding: 2px 16px;}
-  /* ============================================================================================> */
+}
+
+.modal-body,.login-body {padding: 2px 16px;}
+/* ============================================================================================> */
