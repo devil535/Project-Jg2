@@ -38,7 +38,7 @@
             placeholder="Password"
             required=""
             maxlength="30"
-    required
+            required
           />
           <textarea
             name="Address"
@@ -46,7 +46,7 @@
             cols="80"
             rows="10"
             placeholder="Address"
-    required
+            required
           ></textarea>
           <input
             type="tel"
@@ -55,8 +55,8 @@
             placeholder="Contact Number"
             minlength="10"
             maxlength="10"
-    pattern="[1-9]{1}[0-9]{9}"
-    required
+            pattern="[1-9]{1}[0-9]{9}"
+            required
           />
 
           <input type="submit" value="Sign Up" id="submit_button" />
@@ -117,14 +117,11 @@
       </div>
     </div>
 
-
-
     <!-- ==================================================> -->
 
     <script>
       var modal = document.getElementById("myModal");
       var login_pop = document.getElementById("login_error");
-
 
       // ID of "X" Button
       var span = document.getElementsByClassName("close")[0];
@@ -136,25 +133,22 @@
       };
 
       span2.onclick = function () {
-login_pop.style.display = "none";
+        login_pop.style.display = "none";
       };
-
 
       // When the user clicks anywhere outside of the popup, it will close it
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none";
-  login_pop.style.display = "none";
+          login_pop.style.display = "none";
         }
       };
-
 
       window.onclick = function (event) {
         if (event.target == login_error) {
-  login_pop.style.display = "none";
+          login_pop.style.display = "none";
         }
       };
-
 
       // main function of popup
       let log_pass;
@@ -169,15 +163,13 @@ login_pop.style.display = "none";
           "User Name: " + usr_id_val;
         document.getElementById("pop_email").innerText =
           "Email ID: " + email_val;
-
       }
-
 
       function login_valid(ev) {
         ev.preventDefault();
         let usr_id = document.getElementById("login_uid").value;
         let pass = document.getElementById("login_pass").value;
-        
+
         if (usr_id === "UID_001" && pass === log_pass) {
           window.location.href = "./homepage.html";
         } else {
@@ -189,5 +181,3 @@ login_pop.style.display = "none";
     <!-- ====================================popup window -->
   </body>
 </html>
-
-
