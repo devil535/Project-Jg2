@@ -12,7 +12,7 @@ body{
 
 .main{
   width: 400px;
-  height: 550px;
+  height: 570px;
   background: red;
   overflow: hidden;
   /* background: url("1.jpg") no-repeat center / cover; */
@@ -38,7 +38,7 @@ label{
   font-size: 2.3em;
   justify-content: center;
   display: flex;
-  margin: 25px;
+  margin: 10px;
   font-weight: bold;
   cursor: pointer;
   transition: .5s ease-in-out;
@@ -50,7 +50,7 @@ input{
   background-color: #e0dede;
   justify-content: center;
   display: flex;
-  margin: 20px auto;
+  margin: 18px auto;
   padding: 10px;
   border: none;
   outline: none;
@@ -63,7 +63,7 @@ textarea{
   background-color: #e0dede;
   justify-content: center;
   display: flex;
-  margin: 20px auto;
+  margin: 18px auto;
   padding: 10px;
   border: none;
   outline: none;
@@ -73,14 +73,14 @@ textarea{
 button,#submit_button,#login_button{
   width: 40%;
   height: 40px;
-  margin: 20px auto;
+  margin: 18px auto;
   justify-content: center;
   display: block;
   color: #fff;
   background: #450ea9;
   font-size: 1em;
   font-weight: bold;
-  margin-top: 20px;
+  /* margin-top: 0px; */
   outline: none;
   border: none;
   border-radius: 5px;
@@ -108,7 +108,7 @@ button:hover{
 }
 
 #chk:checked ~ .login{
-  transform: translateY(-430px);
+  transform: translateY(-475px);
 }
 
 #chk:checked ~ .login label{
