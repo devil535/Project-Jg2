@@ -36,18 +36,29 @@
             name="pswd"
             id="usr_pas"
             placeholder="Password"
-            required=""
             maxlength="30"
-            required
+    required
           />
+
+          <input
+            type="Password"
+            name="pswd"
+            id="re_usr_pas"
+            placeholder="Confirm Password"
+            maxlength="30"
+    required
+          />
+
           <textarea
             name="Address"
             id="usr_add"
             cols="80"
             rows="10"
             placeholder="Address"
-            required
+    required
           ></textarea>
+
+
           <input
             type="tel"
             id="cont_num"
@@ -55,8 +66,8 @@
             placeholder="Contact Number"
             minlength="10"
             maxlength="10"
-            pattern="[1-9]{1}[0-9]{9}"
-            required
+    pattern="[1-9]{1}[0-9]{9}"
+    required
           />
 
           <input type="submit" value="Sign Up" id="submit_button" />
@@ -117,11 +128,14 @@
       </div>
     </div>
 
+
+
     <!-- ==================================================> -->
 
     <script>
       var modal = document.getElementById("myModal");
       var login_pop = document.getElementById("login_error");
+
 
       // ID of "X" Button
       var span = document.getElementsByClassName("close")[0];
@@ -133,43 +147,55 @@
       };
 
       span2.onclick = function () {
-        login_pop.style.display = "none";
+login_pop.style.display = "none";
       };
+
 
       // When the user clicks anywhere outside of the popup, it will close it
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none";
-          login_pop.style.display = "none";
+  login_pop.style.display = "none";
         }
       };
 
+
       window.onclick = function (event) {
         if (event.target == login_error) {
-          login_pop.style.display = "none";
+  login_pop.style.display = "none";
         }
       };
+
 
       // main function of popup
       let log_pass;
       function popup_window(ev) {
         ev.preventDefault();
-        modal.style.display = "block";
+
         let usr_id_val = document.getElementById("user_name").value;
         let email_val = document.getElementById("email_id").value;
         log_pass = document.getElementById("usr_pas").value;
-
-        document.getElementById("pop_usr_name").innerText =
+let re_pass=document.getElementById("re_usr_pas").value;
+    
+if (log_pass === re_pass){
+        modal.style.display = "block";
+          document.getElementById("pop_usr_name").innerText =
           "User Name: " + usr_id_val;
         document.getElementById("pop_email").innerText =
-          "Email ID: " + email_val;
+            "Email ID: " + email_val;
+}
+else{
+alert("Password and confirm password is not matched....");
+
       }
+}
+
 
       function login_valid(ev) {
         ev.preventDefault();
         let usr_id = document.getElementById("login_uid").value;
         let pass = document.getElementById("login_pass").value;
-
+        
         if (usr_id === "UID_001" && pass === log_pass) {
           window.location.href = "./homepage.html";
         } else {
@@ -181,3 +207,5 @@
     <!-- ====================================popup window -->
   </body>
 </html>
+
+
