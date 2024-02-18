@@ -223,7 +223,7 @@ input[type=number] {
 .modal-header {
   padding: 2px 16px;
   background-color: #5cb85c;
-  color: white;
+  color: rgb(255, 255, 255);
   /* border-radius: 30px; */
   border-top-left-radius:30px ;
   border-top-right-radius: 30px;
