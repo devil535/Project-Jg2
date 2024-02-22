@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(205, 218, 230, 1) 0%, rgba(134, 182, 182, 1) 62%);
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+  opacity: 0.9;
+    position: absolute;
+    height: 540px;
+    margin: 2% 10% 0% 32%;
+    max-width: 500px;
+    border: 4px solid lightskyblue;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.img-container img {
+    width: 100%;
+    height: 639px;
+    opacity: 0.5;
+}
+
+.img-container {
+    width: 100%;
+    z-index: -1;
+    position: relative;
+}
+
+/* h2 {
+    text-align: center;
+    margin-top: 10px;
+} */
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+input[type="date"],
+input[type="time"],
+input[type="amt"],
+select {
+    width: calc(100% - 12px);
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize:none;
+}
+
+#model_name ,#slot_name{
+    width: calc(101% );
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button[type="submit"], #submitbutton {
+    background-color: #075007;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right;
+}
+
+button[type="submit"]:hover , #submitbutton:hover{
+    background-color: #45a049;
+}
+
+
+
+/* ===============================> Popup Screen CSS ============================> */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 250px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.847); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+   
+  }
+  
+  .login-content{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  
+  .close ,.close2 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus ,
+  .close2:hover ,
+  .close2:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #7be57b;
+    color: #1e6b06;
+    /* border-radius: 30px; */
+    border-top-left-radius:30px ;
+    border-top-right-radius: 30px;
+    
+  }
+  
+  .login-header {
+    padding: 2px 16px;
+    background-color: #f10303;
+    color: white;
+    /* border-radius: 30px; */
+    border-top-left-radius:30px ;
+    border-top-right-radius: 30px;
+    
+  }
+  
+  .modal-body,.login-body {padding: 2px 16px;}
+
+  /* ============================================================================================> */

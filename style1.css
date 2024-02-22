@@ -12,6 +12,7 @@
 }
 
 body {
+  margin: unset;
   font-family: serif;
 background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(205,218,230,1) 0%, rgba(134,182,182,1) 62%);
 }
@@ -99,7 +100,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(205,218,230,1) 
   padding: 2px;
   margin-left: 10px;
   border:#141d28 5px;
-  border-style: groove ;
+  border-style: groove  ;
 }
 
 marquee{
@@ -121,4 +122,3 @@ margin-left: 18px;
 margin-bottom: 10px;
 
 }
-
